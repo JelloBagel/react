@@ -1,5 +1,68 @@
 # @primer/components
 
+## 35.26.0
+
+### Minor Changes
+
+- [#3244](https://github.com/primer/react/pull/3244) [`42a78c11`](https://github.com/primer/react/commit/42a78c116fbffda44d85cbbfb93d24f0785fde83) Thanks [@Bestra](https://github.com/Bestra)! - Add pullQueued state to StateLabel
+
+- [#3229](https://github.com/primer/react/pull/3229) [`c0cbdd08`](https://github.com/primer/react/commit/c0cbdd0806809236e681cab535b4a74ecdfcc14a) Thanks [@colebemis](https://github.com/colebemis)! - Add `minWidth prop to `PageLayout.Pane`and`SplitPageLayout.Pane`
+
+- [#2878](https://github.com/primer/react/pull/2878) [`87883c3f`](https://github.com/primer/react/commit/87883c3fd91a5d2809268aa0dd22b87b53ba5309) Thanks [@radglob](https://github.com/radglob)! - Update PRC ActionList implementation to have similar semantics to PVC.
+
+  - Removes `ActionList.Group`.
+  - Adds `ActionList.Heading` to be used for labelling children in an `ActionList`.
+  - Adds `heading` slot to `ActionList` for adding headings that label internal lists correctly.
+
+  ActionList.Groups inside an ActionList generated inaccessible markup. Previous usage:
+
+  ```
+  <ActionList>
+    <ActionList.Group title="Actions">
+      <ActionList.Item>Create</ActionList.Item>
+      <ActionList.Item>Read</ActionList.Item>
+      <ActionList.Item>Update</ActionList.Item>
+      <ActionList.Item>Delete</ActionList.Item>
+    </ActionList.Group>
+    <ActionList.Group>
+      ...
+    </ActionList.Group>
+  </ActionList>
+  ```
+
+  Instead, use `ActionList`s and stack them as needed.
+
+  ```
+  <div>
+    <ActionList>
+      <ActionList.Heading title="Actions" />
+      <ActionList.Item>Create</ActionList.Item>
+      <ActionList.Item>Read</ActionList.Item>
+      <ActionList.Item>Update</ActionList.Item>
+      <ActionList.Item>Delete</ActionList.Item>
+    </ActionList>
+    <ActionList>
+      ...
+    </ActionList>
+  </div>
+  ```
+
+- [#3199](https://github.com/primer/react/pull/3199) [`bfd9e0c8`](https://github.com/primer/react/commit/bfd9e0c8ee3b6b335e04c5c1d4ca82cf23760877) Thanks [@joshblack](https://github.com/joshblack)! - Add support for Pagination in DataTable
+
+### Patch Changes
+
+- [#3270](https://github.com/primer/react/pull/3270) [`6f2340cc`](https://github.com/primer/react/commit/6f2340cc7e17a90b9cb09722ec791d82f4f71329) Thanks [@langermank](https://github.com/langermank)! - Button counter contrast fixes
+
+- [#3207](https://github.com/primer/react/pull/3207) [`6773b90d`](https://github.com/primer/react/commit/6773b90d8ced05fae4ac9024e84cc31f1da9b9a3) Thanks [@colebemis](https://github.com/colebemis)! - `MarkdownViewer` is now SSR-compatible
+
+- [#3154](https://github.com/primer/react/pull/3154) [`fed1c57b`](https://github.com/primer/react/commit/fed1c57b20d5c344a03d5fdeb5c5552c19eabea1) Thanks [@radglob](https://github.com/radglob)! - PageLayout.Content no longer renders as `main` by default. Instead, developers may add a `main` landmark within `Pagelayout.Content` themselves.
+
+- [#3200](https://github.com/primer/react/pull/3200) [`63d8ad6d`](https://github.com/primer/react/commit/63d8ad6d16dd66b96d370ee64d34be026739816a) Thanks [@broccolinisoup](https://github.com/broccolinisoup)! - UnderlineNav2: Add a z-index to make it appear on the top of the stack
+
+- [#3262](https://github.com/primer/react/pull/3262) [`7f2ddcec`](https://github.com/primer/react/commit/7f2ddcecd867a5fc73d21ec1f5c672ef306f13ef) Thanks [@mattcosta7](https://github.com/mattcosta7)! - passthrough form control label props
+
+- [#3182](https://github.com/primer/react/pull/3182) [`7827c711`](https://github.com/primer/react/commit/7827c71163e4d964e9878d624cf4cf1694c7447d) Thanks [@green6erry](https://github.com/green6erry)! - Removed default aria-live polite
+
 ## 35.25.1
 
 ### Patch Changes
